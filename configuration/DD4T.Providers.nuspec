@@ -9,9 +9,9 @@
     <description>SDL Web 8 REST API Providers for DD4T</description>
     <releaseNotes>
     </releaseNotes>
-    <tags>SDLWeb DD4T</tags> 
+    <tags>SDLTridion Tridion SDL SDLWeb SDLWeb8 Web DD4T</tags>
     <dependencies>
-      <dependency id="DD4T.Core" version="2.0.5-beta" />
+      <dependency id="DD4T.Core" version="2.0.8" />
     </dependencies>
   </metadata>
 </package>
