@@ -31,7 +31,7 @@ notifications:
   - provider: Slack
     auth_token:
       secure: sPqYbVki+502+OjRT+o3eITyiG8UDZ0Fu4M1fejZxs3O6OKtYu9JCNS9Ssw3/XjL
-    channel: development
+    channel: '#development'
 deploy:
 - provider: NuGet
   api_key:
