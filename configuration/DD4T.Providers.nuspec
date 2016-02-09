@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:nuget="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DD4T.Providers.SDLWeb8.CIL</id>
@@ -12,6 +12,7 @@
     <tags>SDLTridion Tridion SDL SDLWeb SDLWeb8 Web DD4T</tags>
     <dependencies>
       <dependency id="DD4T.Core" version="2.0.8" />
+      <dependency id="SDL.Web.Delivery" version="8.1.1-beta-201602082135" />
     </dependencies>
   </metadata>
 </package>
