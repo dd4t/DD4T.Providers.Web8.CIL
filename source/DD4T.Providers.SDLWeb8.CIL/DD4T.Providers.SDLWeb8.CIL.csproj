@@ -101,70 +101,6 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sdl.Web.Delivery, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.ADF, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.ADF.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.Broker, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.Broker.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.ContentService, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.ContentService.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.ContentServiceCommon, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.ContentServiceCommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.Core, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.DiscoveryService, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.DiscoveryService.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.Dynamic, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.Dynamic.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.Linking, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.Linking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.Model, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.Model.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.OAuthClient, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.OAuthClient.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.Preview, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.Preview.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.Service, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.Service.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.ServicesCore, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.ServicesCore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.UGC, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.UGC.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sdl.Web.Delivery.WebUI, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Sdl.Web.Delivery.WebUI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -174,20 +110,20 @@
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Data" />
-    <Reference Include="Tridion.ContentDelivery, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Tridion.ContentDelivery.dll</HintPath>
+    <Reference Include="Tridion.ContentDelivery, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Tridion.ContentDelivery.AmbientData, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Tridion.ContentDelivery.AmbientData.dll</HintPath>
+    <Reference Include="Tridion.ContentDelivery.AmbientData, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.AmbientData.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Tridion.ContentDelivery.Preview, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Tridion.ContentDelivery.Preview.dll</HintPath>
+    <Reference Include="Tridion.ContentDelivery.Preview, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.Preview.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Tridion.ContentDelivery.UGC, Version=8.1.1.0, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201602082135\lib\net45\Tridion.ContentDelivery.UGC.dll</HintPath>
+    <Reference Include="Tridion.ContentDelivery.UGC, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.UGC.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
