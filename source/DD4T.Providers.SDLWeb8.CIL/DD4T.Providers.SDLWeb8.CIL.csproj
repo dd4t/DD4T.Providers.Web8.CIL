@@ -111,19 +111,19 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Data" />
     <Reference Include="Tridion.ContentDelivery, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.dll</HintPath>
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1\lib\net45\Tridion.ContentDelivery.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Tridion.ContentDelivery.AmbientData, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.AmbientData.dll</HintPath>
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1\lib\net45\Tridion.ContentDelivery.AmbientData.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Tridion.ContentDelivery.Preview, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.Preview.dll</HintPath>
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1\lib\net45\Tridion.ContentDelivery.Preview.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Tridion.ContentDelivery.UGC, Version=8.1.0.1239, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1-beta-201603090940\lib\net45\Tridion.ContentDelivery.UGC.dll</HintPath>
+      <HintPath>..\packages\Sdl.Web.Delivery.8.1.1\lib\net45\Tridion.ContentDelivery.UGC.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
