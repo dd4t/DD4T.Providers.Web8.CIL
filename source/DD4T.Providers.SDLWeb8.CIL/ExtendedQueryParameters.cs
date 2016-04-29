@@ -7,7 +7,7 @@ using DD4T.ContentModel;
 namespace DD4T.Providers.SDLWeb8.CIL
 {
     public class ExtendedQueryParameters : ITridionQueryWrapper
-    {
+    { 
         public enum QueryLogic
         {
             AllCriteriaMatch,
