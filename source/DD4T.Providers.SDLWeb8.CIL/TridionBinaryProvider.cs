@@ -159,11 +159,13 @@ namespace DD4T.Providers.SDLWeb8.CIL
             return componentMeta == null ? DateTime.MinValue : componentMeta.LastPublicationDate;
         }
 
+
         [Obsolete("Retrieving binaries as a stream has been removed.")]
         public System.IO.Stream GetBinaryStreamByUri(string uri)
         {
             throw new NotImplementedException();
         }
+
 
         [Obsolete("Retrieving binaries as a stream has been removed.")]
         public System.IO.Stream GetBinaryStreamByUrl(string url)
@@ -253,6 +255,4 @@ namespace DD4T.Providers.SDLWeb8.CIL
             return bm;
         }
     }
-   
-    
 }
