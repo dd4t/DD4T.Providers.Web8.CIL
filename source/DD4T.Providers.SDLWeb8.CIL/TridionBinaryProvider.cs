@@ -159,32 +159,18 @@ namespace DD4T.Providers.SDLWeb8.CIL
             return componentMeta == null ? DateTime.MinValue : componentMeta.LastPublicationDate;
         }
 
-        [Obsolete("Retrieving binaries as a stream will be removed from the next version of DD4T")]
+
+        [Obsolete("Retrieving binaries as a stream has been removed.")]
         public System.IO.Stream GetBinaryStreamByUri(string uri)
         {
             throw new NotImplementedException();
         }
 
-        [Obsolete("Retrieving binaries as a stream will be removed from the next version of DD4T")]
+
+        [Obsolete("Retrieving binaries as a stream has been removed.")]
         public System.IO.Stream GetBinaryStreamByUrl(string url)
         {
-            SqlReaderStream stream = null;
-            using (SqlConnection cn = new SqlConnection(ConnectionString))
-            {
-                SqlCommand cmd = new SqlCommand(SqlQuery, cn);
-                cmd.Parameters.Add("@url", SqlDbType.VarChar, 255); // note: the length of the URL parameter must equal the length of the BINARY_VARIANT.PATH column in the broker database
-                cmd.Parameters["@url"].Value = url;
-                cn.Open();
-                //CommandBehavior.SequentialAccess avoids loading the entire BLOB in-memory.
-                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.SequentialAccess);
-                if (false == reader.Read())
-                {
-                    reader.Dispose();
-                    return null;
-                }
-                stream = new SqlReaderStream(reader, 0);
-            }
-            return stream;
+            throw new NotImplementedException();
         }
         #endregion
 
@@ -267,83 +253,6 @@ namespace DD4T.Providers.SDLWeb8.CIL
             bm.LastPublishedDate = componentMeta.LastPublicationDate;
             LoggerService.Debug(string.Format("returning binary for url {0} with the following metadata: Id = {1}, VariantId = {2}, HasLastPublishDate = {3}, lastPublishDate = {4}", url, bm.Id, bm.VariantId, bm.HasLastPublishedDate, bm.LastPublishedDate));
             return bm;
-        }
-    }
-    internal class SqlReaderStream : Stream
-    {
-        private SqlDataReader reader;
-        private int columnIndex;
-        private long position;
-
-        public SqlReaderStream(
-            SqlDataReader reader,
-            int columnIndex)
-        {
-            this.reader = reader;
-            this.columnIndex = columnIndex;
-        }
-
-        public override long Position
-        {
-            get { return position; }
-            set { throw new NotImplementedException(); }
-        }
-
-        public override int Read(byte[] buffer, int offset, int count)
-        {
-            long bytesRead = reader.GetBytes(columnIndex, position, buffer, offset, count);
-            position += bytesRead;
-            return (int)bytesRead;
-        }
-
-        public override bool CanRead
-        {
-            get { return true; }
-        }
-
-        public override bool CanSeek
-        {
-            get { return false; }
-        }
-
-        public override bool CanWrite
-        {
-            get { return false; }
-        }
-
-        public override void Flush()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override long Length
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override long Seek(long offset, SeekOrigin origin)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void SetLength(long value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Write(byte[] buffer, int offset, int count)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && null != reader)
-            {
-                reader.Dispose();
-                reader = null;
-            }
-            base.Dispose(disposing);
         }
     }
 }
