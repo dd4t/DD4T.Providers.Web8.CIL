@@ -186,7 +186,7 @@ namespace DD4T.Providers.SDLWeb8.CIL
             {
                 // Why do we need to tell Tridion what data type the field is! Its in the database already!
                 /* FIX: Does not work (null pointer exception): var sType = typeof(MetadataType).GetField(SortType.ToString()).GetValue(null) as MetadataType;*/
-+               paramSort = new CustomMetaKeyColumn(QuerySortField, SortType);
+                paramSort = new CustomMetaKeyColumn(QuerySortField, SortType);
             }
             SortDirection paramSortDirection = typeof(SortParameter).GetField(QuerySortOrder.ToString()).GetValue(null) as SortDirection;
             SortParameter sortParameter = new SortParameter(paramSort, paramSortDirection);
