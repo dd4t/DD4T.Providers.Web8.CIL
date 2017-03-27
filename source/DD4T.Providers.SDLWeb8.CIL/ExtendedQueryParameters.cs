@@ -1,45 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Tridion.ContentDelivery.DynamicContent.Query;
-using DD4T.ContentModel;
 
 namespace DD4T.Providers.SDLWeb8.CIL
 {
     public class ExtendedQueryParameters : ITridionQueryWrapper
-    { 
-        public enum QueryLogic
-        {
-            AllCriteriaMatch,
-            AnyCriteriaMatch
-        }
-
-        public enum MetaQueryOrder
-        {
-            Ascending,
-            Descending
-        }
-
-       
-
-        public string[] QuerySchemas { get; set; }
-        public IList<MetaQueryItem> MetaQueryValues { get; set; }
-        public QueryLogic MetaQueryLogic { get; set; }
-
-        public IList<KeywordItem> KeywordValues { get; set; }
-        public QueryLogic KeywordQueryLogic { get; set; }
-
-        public DateTime LastPublishedDate { get; set; }
-        public string QuerySortField { get; set; }
-        public MetaQueryOrder QuerySortOrder { get; set; }
-        public int MaximumComponents { get; set; }
-        public int PublicationId { get; set; }
-        public MetadataType SortType { get; set; }
-
+    {
         public ExtendedQueryParameters()
         {
             // Default all parameters
-            QuerySchemas = new string[]{};
+            QuerySchemas = new string[] { };
             MetaQueryValues = new List<MetaQueryItem>();
             MetaQueryLogic = QueryLogic.AllCriteriaMatch;
 
@@ -54,8 +25,29 @@ namespace DD4T.Providers.SDLWeb8.CIL
             MaximumComponents = int.MaxValue;
         }
 
+        public enum MetaQueryOrder
+        {
+            Ascending,
+            Descending
+        }
 
+        public enum QueryLogic
+        {
+            AllCriteriaMatch,
+            AnyCriteriaMatch
+        }
 
+        public QueryLogic KeywordQueryLogic { get; set; }
+        public IList<KeywordItem> KeywordValues { get; set; }
+        public DateTime LastPublishedDate { get; set; }
+        public int MaximumComponents { get; set; }
+        public QueryLogic MetaQueryLogic { get; set; }
+        public IList<MetaQueryItem> MetaQueryValues { get; set; }
+        public int PublicationId { get; set; }
+        public string[] QuerySchemas { get; set; }
+        public string QuerySortField { get; set; }
+        public MetaQueryOrder QuerySortOrder { get; set; }
+        public MetadataType SortType { get; set; }
 
         public Tridion.ContentDelivery.DynamicContent.Query.Query ToTridionQuery()
         {
@@ -66,10 +58,13 @@ namespace DD4T.Providers.SDLWeb8.CIL
             int maxmimumComponents = MaximumComponents;
 
             Query q = null;
+
             //PublicationCriteria publicationAndLastPublishedDateCriteria = new PublicationCriteria(PublicationId);
             PublicationCriteria publicationAndLastPublishedDateCriteria = new PublicationCriteria(PublicationId);
+
             //format DateTime // 00:00:00.000
             ItemLastPublishedDateCriteria dateLastPublished = new ItemLastPublishedDateCriteria(lastPublishedDate.ToString("yyyy-MM-dd HH:mm:ss.fff"), Criteria.GreaterThanOrEqual);
+
             //publicationAndLastPublishedDateCriteria.AddCriteria(dateLastPublished);
 
             Criteria basedOnSchemaAndInPublication;
@@ -111,12 +106,15 @@ namespace DD4T.Providers.SDLWeb8.CIL
                             DateTime tempDate = (DateTime)queryItem.MetaValue;
                             metaCriteria = new CustomMetaValueCriteria(metaField, tempDate.ToString("yyyy-MM-dd HH:mm:ss.fff"), "yyyy-MM-dd HH:mm:ss.SSS", metaOperator);
                             break;
+
                         case "Float":
                             metaCriteria = new CustomMetaValueCriteria(metaField, (float)queryItem.MetaValue, metaOperator);
                             break;
+
                         case "String":
                             metaCriteria = new CustomMetaValueCriteria(metaField, queryItem.MetaValue as string, metaOperator);
                             break;
+
                         default:
                             throw new System.Exception("Unexpected query item data type; " + queryItem.MetaValue.GetType().Name);
                     }
@@ -168,7 +166,6 @@ namespace DD4T.Providers.SDLWeb8.CIL
                 allConditions = schemasAndMetaData;
             }
 
-
             q = new Query(allConditions);
             if (maxmimumComponents != 0 && maxmimumComponents != int.MaxValue)
             {
@@ -197,20 +194,31 @@ namespace DD4T.Providers.SDLWeb8.CIL
 
     public class KeywordItem
     {
-        public string KeywordUri { get; set; }
-        public string CategoryUri { get; set; }
-
         public KeywordItem(string category, string keyword)
         {
             this.KeywordUri = keyword;
             this.CategoryUri = category;
         }
+
+        public string CategoryUri { get; set; }
+        public string KeywordUri { get; set; }
     }
 
     public class MetaQueryItem
     {
         private readonly string[] supportedTypes = { "Float", "DateTime", "String" };
         private object metaValueData;
+
+        public MetaQueryItem(string fieldName, object fieldValue) : this(fieldName, fieldValue, QueryOperator.Equal)
+        {
+        }
+
+        public MetaQueryItem(string fieldName, object fieldValue, QueryOperator fieldOperator)
+        {
+            MetaField = fieldName;
+            MetaValue = fieldValue;
+            MetaOperator = fieldOperator;
+        }
 
         public enum QueryOperator
         {
@@ -224,9 +232,14 @@ namespace DD4T.Providers.SDLWeb8.CIL
         }
 
         public string MetaField { get; set; }
+        public QueryOperator MetaOperator { get; set; }
+
         public object MetaValue
         {
-            get { return metaValueData; }
+            get
+            {
+                return metaValueData;
+            }
             set
             {
                 if (!supportedTypes.Contains(value.GetType().Name))
@@ -235,18 +248,6 @@ namespace DD4T.Providers.SDLWeb8.CIL
                 }
                 metaValueData = value;
             }
-        }
-        public QueryOperator MetaOperator { get; set; }
-
-        public MetaQueryItem(string fieldName, object fieldValue): this(fieldName, fieldValue, QueryOperator.Equal)
-        {
-        }
-
-        public MetaQueryItem(string fieldName, object fieldValue, QueryOperator fieldOperator)
-        {
-            MetaField = fieldName;
-            MetaValue = fieldValue;
-            MetaOperator = fieldOperator;
         }
     }
 }
