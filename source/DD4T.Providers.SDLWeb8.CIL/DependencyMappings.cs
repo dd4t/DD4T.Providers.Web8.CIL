@@ -16,6 +16,7 @@ namespace DD4T.Providers.SDLWeb8.CIL
 			{
 				{ typeof(IProvider), typeof(BaseProvider) },
 				{ typeof(IPageProvider), typeof(TridionPageProvider) },
+				{ typeof(IProvidersCommonServices), typeof(ProvidersCommonServices) },
 				{ typeof(IComponentPresentationProvider), typeof(TridionComponentPresentationProvider) },
 				{ typeof(IBinaryProvider), typeof(TridionBinaryProvider) },
 				{ typeof(ILinkProvider), typeof(TridionLinkProvider) },
