@@ -162,11 +162,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
-  <!--<Import Project="..\..\DD4T Providers.Targets" />-->
+  <Import Project="..\..\DD4T Providers.Targets" />
   <Target Name="AfterBuild">
-    <!--<CallTarget Targets="Package" />
+    <CallTarget Targets="Package" />
     <Message Text="Installing package to local NuGet repo" Importance="high" Condition="'$(NUGET_LOCALREPO)' != ''" />
-    <CallTarget Targets="Install" Condition="'$(NUGET_LOCALREPO)' != ''" />-->
+    <CallTarget Targets="Install" Condition="'$(NUGET_LOCALREPO)' != ''" />
   </Target>
   <Target Name="BeforeBuild">
     <Message Text="Mimic SDL Web 8 NuGet packages if there are files in the dependency folder" Importance="high" />
