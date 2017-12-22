@@ -143,7 +143,6 @@
 	
 	<Target Name="BeforeBuild">
 	  <ItemGroup>
-	  	 <Message Text="BeforeBuild clen" Importance="high" />
 	        <ReferenceNew Include="@(Reference)">
 	           <Private>False</Private>
 	        </ReferenceNew>
