@@ -154,7 +154,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
-  <!--<Import Project="..\..\DD4T Providers.Targets" />-->
+  <Import Project="..\..\DD4T Providers.Targets" />
   <Target Name="AfterBuild">
     <!--<CallTarget Targets="Package" />
     <Message Text="Installing package to local NuGet repo" Importance="high" Condition="'$(NUGET_LOCALREPO)' != ''" />
