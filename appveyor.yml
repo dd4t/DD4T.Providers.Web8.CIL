@@ -29,6 +29,7 @@ notifications:
     channel: '#development'
 skip_commits:
   message: /\[nobuild\]/
+skip_tags: true
 deploy:
 - provider: NuGet
   api_key:
